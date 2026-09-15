@@ -1,5 +1,6 @@
 import bpy
 import gpu
+import blf
 
 try:
     from . import my_engine
@@ -73,10 +74,18 @@ class GpuDrawManager:
         gpu.state.blend_set('ALPHA')
         for panel in panels:
             x, y, w, h, label, is_open = panel
-            print(panel)
+            # print(panel)
             if label == "Custom GPU Engine" and is_open:
-                # Draw Here
-                pass
+                # Draw Here: simple text using blf
+                font_id = 0
+                try:
+                    blf.size(font_id, 16)
+                except TypeError:
+                    blf.size(font_id, 16, 72)
+
+                blf.color(font_id, 1.0, 1.0, 1.0, 1.0)
+                blf.position(font_id, x + 20, y + (h / 2), 0)
+                blf.draw(font_id, "Hello from Custom GPU Engine!")
             
         gpu.state.blend_set('NONE')
 

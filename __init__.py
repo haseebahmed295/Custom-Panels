@@ -1,8 +1,8 @@
 bl_info = {
     "name": "Custom GPU Panel Engine",
-    "author": "Your Name",
+    "author": "haseebahmed295",
     "version": (1, 0, 0),
-    "blender": (3, 0, 0),
+    "blender": (5, 0, 0),
     "location": "View3D > N-Panel > My Engine",
     "description": "Draws a custom GPU overlay inside the N-Panel",
     "warning": "Requires custom my_engine binary",
