@@ -1,0 +1,17 @@
+schema_version = "1.0.0"
+id = "custom_gpu_ui"
+version = "1.0.0"
+name = "Custom GPU UI Engine"
+tagline = "Native memory bridge for UI panels"
+maintainer = "Your Name"
+type = "add-on"
+
+blender_version_min = "5.1.0"
+platforms = ["windows-x64"]
+
+wheels = [
+    
+]
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
